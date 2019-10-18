@@ -1,4 +1,7 @@
 class Node:
+    """Represents the a single list node
+    """
+
     def __init__(self, value=None, next_node=None):
         # the value at this linked list node
         self.value = value
@@ -17,11 +20,19 @@ class Node:
 
 
 class LinkedList:
+    """Singly Linked List class
+    """
+
     def __init__(self):
         # reference to the head of the list
         self.head = None
 
     def add_to_head(self, value):
+        """Adds a node to the head of the linked list
+
+        Arguments:
+            value {value} -- value to be inserted at the head of the list
+        """
         node = Node(value)
         if self.head is not None:
             node.set_next(self.head)
@@ -29,6 +40,14 @@ class LinkedList:
         self.head = node
 
     def contains(self, value):
+        """Checks if a value is in the list
+
+        Arguments:
+            value {int} -- value to be checked for
+
+        Returns:
+            bool -- True if found and False otherwise
+        """
         if not self.head:
             return False
         # get a reference to the node we're currently at; update this as we traverse the list
@@ -44,6 +63,8 @@ class LinkedList:
         return False
 
     def reverse_list(self):
+        """Reverses the linked list recursively
+        """
         # if the list is empty return
         if self.head is None:
             return

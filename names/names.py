@@ -32,3 +32,30 @@ end_time = time.time()
 
 print(f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
 print(f"runtime: {end_time - start_time} seconds")
+
+
+# STRETCH SOLUTION
+# DOES NOT STORE NAMES IN MEMORY
+# FINDS THE SAME 64 DUPLICATES BUT TAKES ABOUT 15 SECONDS
+
+# Uncomment to test it out
+
+# import time
+
+# start_time = time.time()
+
+# duplicates = 0
+
+# with open('names_1.txt', 'r') as f:
+#     for line in f:
+#         with open('names_2.txt', 'r') as f2:
+#             for line2 in f2:
+#                 if line == line2:
+#                     print(line)
+#                     duplicates += 1
+
+
+# end_time = time.time()
+
+# print(f"Number of duplicates: {duplicates}")
+# print(f"runtime: {end_time - start_time} seconds")
